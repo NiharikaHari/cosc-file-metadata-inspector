@@ -1,0 +1,133 @@
+.app-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  background: #f4f5f7;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #1b3a4b;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.app-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: normal;
+  text-align: left;
+  flex: 1;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  text-align: left;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Drop zone */
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 20px;
+  border: 2px dashed #b3bac5;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  color: #44546f;
+}
+
+.dropzone--active {
+  border-color: #0c66e4;
+  background: #eaf1ff;
+}
+
+.dropzone button {
+  background: #0c66e4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dropzone button:hover {
+  background: #0955c5;
+}
+
+/* Metadata results */
+
+.metadata-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 2px rgba(9, 30, 66, 0.15);
+}
+
+.card-title {
+  font-size: 1rem;
+  color: #172b4d;
+  margin: 0 0 12px;
+}
+
+.info-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid #edeef2;
+  font-size: 0.9rem;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #44546f;
+}
+
+.info-value {
+  color: #172b4d;
+  font-weight: 500;
+  text-align: right;
+}
+
+.status-note {
+  font-size: 0.9rem;
+  color: #44546f;
+  padding: 4px 0;
+}
+
+.status-note--error {
+  color: #ae2e24;
+}
