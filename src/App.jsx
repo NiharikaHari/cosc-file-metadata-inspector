@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import DropZone from './components/DropZone.jsx'
 import MetadataResults from './components/MetadataResults.jsx'
 import { extractGeneralInfo } from './utils/generalMetadata.js'
@@ -10,10 +10,11 @@ import './App.css'
 export default function App() {
   const [file, setFile] = useState(null)
   const [status, setStatus] = useState('idle')
-  const [general, setGeneral] = useState(null)
   const [image, setImage] = useState(null)
   const [pdf, setPdf] = useState(null)
   const [sectionError, setSectionError] = useState(null)
+
+  const general = useMemo(() => (file ? extractGeneralInfo(file) : null), [file])
 
   useEffect(() => {
     if (!file) return undefined
@@ -23,7 +24,6 @@ export default function App() {
     setImage(null)
     setPdf(null)
     setSectionError(null)
-    setGeneral(extractGeneralInfo(file))
 
     ;(async () => {
       try {

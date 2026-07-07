@@ -33,6 +33,6 @@ export async function extractPdfMetadata(file) {
         : null,
     }
   } finally {
-    pdfDocument.destroy()
+    loadingTask.destroy()
   }
 }
